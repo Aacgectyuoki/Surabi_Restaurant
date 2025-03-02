@@ -29,4 +29,9 @@ public class BillService {
     public void deleteBill(Long id) {
         billRepository.deleteById(id);
     }
+
+    public double getTotalSalesForMonth() {
+        return billRepository.getTotalSalesForMonth();
+    }
+
 }

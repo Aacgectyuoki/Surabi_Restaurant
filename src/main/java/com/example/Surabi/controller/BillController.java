@@ -27,6 +27,11 @@ public class BillController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    @GetMapping("/monthly-sales")
+    public ResponseEntity<Double> getMonthlySales() {
+        return ResponseEntity.ok(billService.getTotalSalesForMonth());
+    }
+
     @PostMapping
     public ResponseEntity<Bill> createBill(@RequestBody Bill bill) {
         return ResponseEntity.ok(billService.saveBill(bill));
