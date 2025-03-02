@@ -20,6 +20,16 @@ public class OrderController {
         return ResponseEntity.ok(orderService.findAllOrders());
     }
 
+    @GetMapping("/user/{userId}/orders")
+    public ResponseEntity<List<Order>> getUserOrders(@PathVariable Long userId) {
+        return ResponseEntity.ok(orderService.getUserOrders(userId));
+    }
+
+    @GetMapping("/orders/user/{userId}")
+    public ResponseEntity<List<Order>> getOrdersByUser(@PathVariable Long userId) {
+        return ResponseEntity.ok(orderService.getOrdersByUser(userId));
+    }
+
     @GetMapping("/{id}")
     public ResponseEntity<Order> getOrderById(@PathVariable Long id) {
         return orderService.findOrderById(id)
@@ -27,6 +37,9 @@ public class OrderController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    // As a user, I should be able to select the item I want to order.
+    // As a user, I should be able to order n number of plates per item.
+    // As a user, I should be able to order more than one item.
     @PostMapping
     public ResponseEntity<Order> createOrder(@RequestBody Order order) {
         return ResponseEntity.ok(orderService.saveOrder(order));

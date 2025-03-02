@@ -27,6 +27,11 @@ public class BillController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    @GetMapping("/today")
+    public ResponseEntity<List<Bill>> getBillsGeneratedToday() {
+        return ResponseEntity.ok(billService.getBillsGeneratedToday());
+    }
+
     @GetMapping("/monthly-sales")
     public ResponseEntity<Double> getMonthlySales() {
         return ResponseEntity.ok(billService.getTotalSalesForMonth());

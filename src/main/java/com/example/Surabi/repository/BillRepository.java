@@ -1,13 +1,18 @@
 package com.example.Surabi.repository;
 
 import com.example.Surabi.model.Bill;
+import com.example.Surabi.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
+
+import java.util.Date;
+import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface BillRepository extends JpaRepository<Bill, Long> {
-    @Query("SELECT SUM(b.totalAmount) FROM Bill b WHERE MONTH(b.date) = MONTH(CURRENT_DATE)")
-    double getTotalSalesForMonth();
 
+    List<Bill> findByCreatedAtBetween(Date startDate, Date endDate);
+
+    Optional<Bill> findTopByUserOrderByCreatedAtDesc(User user);
 }

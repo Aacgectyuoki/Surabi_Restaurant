@@ -1,12 +1,17 @@
 package com.example.Surabi.model;
 
 import jakarta.persistence.*;
-import lombok.Getter;
+import lombok.*;
 
+@Getter
+@Setter
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 @Table(name = "orders")
+@Data
 public class Order {
-    @Getter
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -21,8 +26,8 @@ public class Order {
 
     private int quantity;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+//    public void setId(Long id) {
+//        this.id = id;
+//    }
 
 }
