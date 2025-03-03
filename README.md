@@ -64,11 +64,14 @@ Open Postman.
 Login to get a JWT Token:
 
 POST http://localhost:8080/auth/login
+
 Body (JSON):
+
 {
   "username": "your_admin_username",
   "password": "your_admin_password"
 }
+
 Copy the JWT token from the response.
 Use the Token for Authenticated Requests:
 
