@@ -6,7 +6,7 @@ Surabi is a RESTful API built using Spring Boot, Spring Security, JWT authentica
 # How to Set Up and Run the Application Locally
 
 # Step 1: Clone the Repository
-git clone [https://github.com/your-username/surabi-api.git](https://github.com/Aacgectyuoki/Surabi_Restaurant.git )
+git clone https://github.com/Aacgectyuoki/Surabi_Restaurant.git
 cd surabi-api
 
 # Step 2: Open the Project in IntelliJ IDEA
