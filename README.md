@@ -50,7 +50,7 @@ springdoc.swagger-ui.persistAuthorization=true
 # Step 4: Run the Application
 Method 1: Using IntelliJ
 Open SurabiApplication.java.
-Click Run or press Shift + F10.
+Click Run (the green arrow)
 
 Method 2: Using Terminal
 Open the terminal in IntelliJ.
