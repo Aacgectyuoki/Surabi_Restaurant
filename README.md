@@ -77,7 +77,9 @@ Copy the JWT token from the response.
 Use the Token for Authenticated Requests:
 
 Go to Authorization → Select Bearer Token.
+
 Paste the copied JWT token.
+
 
 Example API calls:
 
