@@ -65,9 +65,6 @@ Login to get a JWT Token:
 
 POST http://localhost:8080/auth/login
 Body (JSON):
-json
-Copy
-Edit
 {
   "username": "your_admin_username",
   "password": "your_admin_password"
