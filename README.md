@@ -1,4 +1,4 @@
-# Surabi API
+## Surabi API
 
 # Overview
 Surabi is a RESTful API built using Spring Boot, Spring Security, JWT authentication, and Swagger for API documentation.
@@ -90,8 +90,7 @@ Example API calls:
 
 # Step 5b: Test with Swagger UI
 Open Swagger UI in your browser:
-
-http://localhost:8080/swagger-ui/index.html
+    http://localhost:8080/swagger-ui/index.html
 
 Click on the Authorize button.
 
@@ -105,8 +104,8 @@ Open H2 Console in your browser:
 http://localhost:8080/h2-console
 
 Enter the following credentials (from application.properties):
-JDBC URL: jdbc:h2:mem:testdb
-Username: your_db_username
-Password: your_db_password
+    JDBC URL: jdbc:h2:mem:testdb
+    Username: your_db_username
+    Password: your_db_password
 
 Click Connect to view the database.
