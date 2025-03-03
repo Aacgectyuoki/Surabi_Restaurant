@@ -7,6 +7,7 @@ Surabi is a RESTful API built using Spring Boot, Spring Security, JWT authentica
 
 # Step 1: Clone the Repository
 git clone https://github.com/Aacgectyuoki/Surabi_Restaurant.git
+
 cd surabi-api
 
 # Step 2: Open the Project in IntelliJ IDEA
