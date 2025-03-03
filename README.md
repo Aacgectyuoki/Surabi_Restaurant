@@ -104,6 +104,7 @@ Open H2 Console in your browser:
 http://localhost:8080/h2-console
 
 Enter the following credentials (from application.properties):
+
     JDBC URL: jdbc:h2:mem:testdb
     Username: your_db_username
     Password: your_db_password
