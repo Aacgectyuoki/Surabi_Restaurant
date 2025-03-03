@@ -83,13 +83,10 @@ Paste the copied JWT token.
 
 Example API calls:
 
-Get Users: GET http://localhost:8080/api/users
-
-Create User: POST http://localhost:8080/api/users
-
-Update User: PUT http://localhost:8080/api/users/{id}
-
-Delete User: DELETE http://localhost:8080/api/users/{id}
+    Get Users: GET http://localhost:8080/api/users
+    Create User: POST http://localhost:8080/api/users
+    Update User: PUT http://localhost:8080/api/users/{id}
+    Delete User: DELETE http://localhost:8080/api/users/{id}
 
 # Step 5b: Test with Swagger UI
 Open Swagger UI in your browser:
