@@ -1,19 +1,20 @@
-Surabi API
-Overview
+# Surabi API
+
+# Overview
 Surabi is a RESTful API built using Spring Boot, Spring Security, JWT authentication, and Swagger for API documentation.
 
-How to Set Up and Run the Application Locally
-Step 1: Clone the Repository
-sh
-Copy
-Edit
+# How to Set Up and Run the Application Locally
+
+# Step 1: Clone the Repository
 git clone https://github.com/your-username/surabi-api.git
 cd surabi-api
-Step 2: Open the Project in IntelliJ IDEA
+
+# Step 2: Open the Project in IntelliJ IDEA
 Open IntelliJ IDEA (or your preferred IDE).
 Click File → Open → Select the surabi-api folder.
 Wait for Maven dependencies to load.
-Step 3: Configure Application Properties
+
+# Step 3: Configure Application Properties
 Navigate to src/main/resources/application.properties.
 Update the following values:
 properties
