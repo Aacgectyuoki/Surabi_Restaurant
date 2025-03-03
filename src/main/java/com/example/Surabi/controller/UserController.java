@@ -17,11 +17,13 @@ public class UserController {
     @Autowired
     private UserService userService;
 
+    // Retrieve all users
     @GetMapping
     public ResponseEntity<List<User>> getAllUsers() {
         return ResponseEntity.ok(userService.findAllUsers());
     }
 
+    // Retrieve a user by its id
     @GetMapping("/{id}")
     public ResponseEntity<User> getUserById(@PathVariable Long id) {
         return userService.findUserById(id)
@@ -29,11 +31,13 @@ public class UserController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    // Create a new user (Create)
     @PostMapping
     public ResponseEntity<User> createUser(@RequestBody User user) {
         return ResponseEntity.ok(userService.saveUser(user));
     }
 
+    // Update an existing user (Update)
     @PutMapping("/{id}")
     public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User user) {
         return userService.findUserById(id)
@@ -44,6 +48,7 @@ public class UserController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    // Delete a user (Delete)
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteUser(@PathVariable Long id) {
         return userService.findUserById(id)

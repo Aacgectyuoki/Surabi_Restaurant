@@ -22,6 +22,7 @@ public class AuthController {
         this.jwtUtil = jwtUtil;
     }
 
+    // Endpoint to authenticate a user and generate a JWT token
     @PostMapping("/login")
     public ResponseEntity<?> login(@RequestBody LoginRequest request) {
         Authentication authentication = authenticationManager.authenticate(

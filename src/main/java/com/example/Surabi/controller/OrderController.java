@@ -15,21 +15,25 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
 
+    // Retrieve all orders
     @GetMapping
     public ResponseEntity<List<Order>> getAllOrders() {
         return ResponseEntity.ok(orderService.findAllOrders());
     }
 
+    // Retrieve all orders placed by a user
     @GetMapping("/user/{userId}/orders")
     public ResponseEntity<List<Order>> getUserOrders(@PathVariable Long userId) {
         return ResponseEntity.ok(orderService.getUserOrders(userId));
     }
 
+    // Retrieve all orders placed by a user
     @GetMapping("/orders/user/{userId}")
     public ResponseEntity<List<Order>> getOrdersByUser(@PathVariable Long userId) {
         return ResponseEntity.ok(orderService.getOrdersByUser(userId));
     }
 
+    // Retrieve an order by its id
     @GetMapping("/{id}")
     public ResponseEntity<Order> getOrderById(@PathVariable Long id) {
         return orderService.findOrderById(id)
@@ -45,6 +49,7 @@ public class OrderController {
         return ResponseEntity.ok(orderService.saveOrder(order));
     }
 
+    // Update the quantity of an item in my order (Update)
     @PutMapping("/{id}")
     public ResponseEntity<Order> updateOrder(@PathVariable Long id, @RequestBody Order order) {
         return orderService.findOrderById(id)
@@ -55,6 +60,7 @@ public class OrderController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
+    // Remove an item from my order (Delete)
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteOrder(@PathVariable Long id) {
         return orderService.findOrderById(id)

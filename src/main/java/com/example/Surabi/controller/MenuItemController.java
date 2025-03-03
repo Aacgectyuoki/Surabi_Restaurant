@@ -15,12 +15,13 @@ public class MenuItemController {
     @Autowired
     private MenuItemService menuItemService;
 
-    // As a user, I should be able to see all items available along with the price.
+    // Show all items available along with the price
     @GetMapping
     public ResponseEntity<List<MenuItem>> getAllMenuItems() {
         return ResponseEntity.ok(menuItemService.findAllMenuItems());
     }
 
+    // Retrieve a menu item by its id
     @GetMapping("/{id}")
     public ResponseEntity<MenuItem> getMenuItemById(@PathVariable Long id) {
         return menuItemService.findMenuItemById(id)
@@ -28,13 +29,13 @@ public class MenuItemController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // As an admin, I should be able to perform CRUD on menu and menu items (Create).
+    // Perform CRUD on menu and menu items (Create)
     @PostMapping
     public ResponseEntity<MenuItem> createMenuItem(@RequestBody MenuItem menuItem) {
         return ResponseEntity.ok(menuItemService.saveMenuItem(menuItem));
     }
 
-    // As an admin, I should be able to perform CRUD on menu and menu items (Update).
+    // Perform CRUD on menu and menu items (Update)
     @PutMapping("/{id}")
     public ResponseEntity<MenuItem> updateMenuItem(@PathVariable Long id, @RequestBody MenuItem menuItem) {
         return menuItemService.findMenuItemById(id)
@@ -45,7 +46,7 @@ public class MenuItemController {
                 .orElseGet(() -> ResponseEntity.notFound().build());
     }
 
-    // As an admin, I should be able to perform CRUD on menu and menu items (Delete).
+    // Perform CRUD on menu and menu items (Delete)
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteMenuItem(@PathVariable Long id) {
         return menuItemService.findMenuItemById(id)
