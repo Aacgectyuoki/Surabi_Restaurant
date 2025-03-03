@@ -23,6 +23,10 @@ public class User {
     @OneToMany(mappedBy = "user")
     private Set<Order> orders;
 
+    @Column(nullable = false)
+    private String role = "ROLE_USER";
+
+
     public void setId(Long id) {
         this.id = id;
     }

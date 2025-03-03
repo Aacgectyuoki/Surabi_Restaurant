@@ -13,8 +13,14 @@ public class MenuItem {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "price")
     private double price;
+
+    @Column(name = "category")
+    private String category;
 
     @OneToMany(mappedBy = "menuItem")
     private Set<Order> orders;

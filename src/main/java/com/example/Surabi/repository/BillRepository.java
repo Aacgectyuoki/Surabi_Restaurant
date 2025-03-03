@@ -12,7 +12,12 @@ import java.util.Optional;
 @Repository
 public interface BillRepository extends JpaRepository<Bill, Long> {
 
+    // Find all bills associated with a specific user ID
+    List<Bill> findByUserId(Long userId);
+
+    // Find all bills within a specific date range
     List<Bill> findByCreatedAtBetween(Date startDate, Date endDate);
 
+    //Get the most recent bill for a user.
     Optional<Bill> findTopByUserOrderByCreatedAtDesc(User user);
 }
