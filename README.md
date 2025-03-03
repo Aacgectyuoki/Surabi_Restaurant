@@ -8,9 +8,8 @@ Surabi is a RESTful API built using Spring Boot, Spring Security, JWT authentica
 # Step 1: Clone the Repository
 In your terminal:
 
-git clone https://github.com/Aacgectyuoki/Surabi_Restaurant.git
-
-cd Surabi_Restaurant
+    git clone https://github.com/Aacgectyuoki/Surabi_Restaurant.git
+    cd Surabi_Restaurant
 
 # Step 2: Open the Project in IntelliJ IDEA
 Open IntelliJ IDEA (or your preferred IDE).
@@ -21,31 +20,31 @@ Wait for Maven dependencies to load.
 Navigate to src/main/resources/application.properties.
 Update the following values:
 properties
-spring.application.name=Surabi
-
-spring.datasource.url=jdbc:h2:mem:testdb
-spring.datasource.driverClassName=org.h2.Driver
-spring.datasource.username=your_db_username
-spring.datasource.password=your_db_password
-spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
-
-spring.h2.console.enabled=true
-spring.h2.console.path=/h2-console
-
-logging.level.root=DEBUG
-logging.level.org.springframework=DEBUG
-logging.level.org.springframework.web=DEBUG
-
-spring.security.user.name=your_admin_username
-spring.security.user.password=your_admin_password
-
-jwt.secret=your-secret-key
-
-springdoc.api-docs.enabled=true
-springdoc.swagger-ui.enabled=true
-springdoc.swagger-ui.oauth.client-id=swagger
-springdoc.swagger-ui.oauth.client-secret=swagger-secret
-springdoc.swagger-ui.persistAuthorization=true
+    spring.application.name=Surabi
+    
+    spring.datasource.url=jdbc:h2:mem:testdb
+    spring.datasource.driverClassName=org.h2.Driver
+    spring.datasource.username=your_db_username
+    spring.datasource.password=your_db_password
+    spring.jpa.database-platform=org.hibernate.dialect.H2Dialect
+    
+    spring.h2.console.enabled=true
+    spring.h2.console.path=/h2-console
+    
+    logging.level.root=DEBUG
+    logging.level.org.springframework=DEBUG
+    logging.level.org.springframework.web=DEBUG
+    
+    spring.security.user.name=your_admin_username
+    spring.security.user.password=your_admin_password
+    
+    jwt.secret=your-secret-key
+    
+    springdoc.api-docs.enabled=true
+    springdoc.swagger-ui.enabled=true
+    springdoc.swagger-ui.oauth.client-id=swagger
+    springdoc.swagger-ui.oauth.client-secret=swagger-secret
+    springdoc.swagger-ui.persistAuthorization=true
 
 # Step 4: Run the Application
 Method 1: Using IntelliJ
@@ -58,7 +57,7 @@ Run the following command:
 mvn spring-boot:run
 
 # How to Test the API
-# Step 5: Test with Postman
+# Step 5a: Test with Postman
 Open Postman.
 
 Login to get a JWT Token:
@@ -69,9 +68,8 @@ Body (JSON):
 
 {
 
-  "username": "your_admin_username",
-  
-  "password": "your_admin_password"
+      "username": "your_admin_username",
+      "password": "your_admin_password"
   
 }
 
@@ -80,28 +78,36 @@ Use the Token for Authenticated Requests:
 
 Go to Authorization → Select Bearer Token.
 Paste the copied JWT token.
+
 Example API calls:
+
 Get Users: GET http://localhost:8080/api/users
+
 Create User: POST http://localhost:8080/api/users
+
 Update User: PUT http://localhost:8080/api/users/{id}
+
 Delete User: DELETE http://localhost:8080/api/users/{id}
-Step 6: Test with Swagger UI
+
+# Step 5b: Test with Swagger UI
 Open Swagger UI in your browser:
-bash
-Copy
-Edit
+
 http://localhost:8080/swagger-ui/index.html
+
 Click on the Authorize button.
+
 Enter the JWT token from Postman.
+
 Test different endpoints directly from Swagger.
-Step 7: Access H2 Database Console
+
+# Step 6: Access H2 Database Console
 Open H2 Console in your browser:
-bash
-Copy
-Edit
+
 http://localhost:8080/h2-console
+
 Enter the following credentials (from application.properties):
 JDBC URL: jdbc:h2:mem:testdb
 Username: your_db_username
 Password: your_db_password
+
 Click Connect to view the database.
