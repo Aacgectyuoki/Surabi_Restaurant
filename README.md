@@ -92,11 +92,31 @@ Example API calls:
 Open Swagger UI in your browser:
     http://localhost:8080/swagger-ui/index.html
 
-Click on the Authorize button.
+Click on "POST /auth/login" and click "Try it out"
 
-Enter the JWT token from Postman.
+You should put
 
-Test different endpoints directly from Swagger.
+    {
+
+      "username": "{your_admin_username}",
+  
+      "password": "{your_admin_password}"
+  
+    }
+
+Click "Execute" and then head to the Response Body. You will see the JWT token.
+
+Copy the JWT token from the POST /auth/login response.
+
+Go to the top and click "Authorize"
+
+Paste the JWT token inside "Value:"
+
+Click "Authorize"
+
+After authorizing, you can now test secured endpoints.
+
+Example: test "POST /api/users" and verify with "GET /api/users". A 200 code means you are correct. Also, do not put the id value since it is automatically created.
 
 ## Step 6: Access H2 Database Console
 Open H2 Console in your browser:
