@@ -97,11 +97,8 @@ Click on "POST /auth/login" and click "Try it out"
 You should put
 
     {
-
       "username": "{your_admin_username}",
-  
       "password": "{your_admin_password}"
-  
     }
 
 Click "Execute" and then head to the Response Body. You will see the JWT token.
