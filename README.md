@@ -1,22 +1,22 @@
-## Surabi API
+# Surabi API
 
 # Overview
 Surabi is a RESTful API built using Spring Boot, Spring Security, JWT authentication, and Swagger for API documentation.
 
 # How to Set Up and Run the Application Locally
 
-# Step 1: Clone the Repository
+## Step 1: Clone the Repository
 In your terminal:
 
     git clone https://github.com/Aacgectyuoki/Surabi_Restaurant.git
     cd Surabi_Restaurant
 
-# Step 2: Open the Project in IntelliJ IDEA
+## Step 2: Open the Project in IntelliJ IDEA
 Open IntelliJ IDEA (or your preferred IDE).
 Click File → Open → Select the Surabi_Restaurant folder.
 Wait for Maven dependencies to load.
 
-# Step 3: Configure Application Properties
+## Step 3: Configure Application Properties
 Navigate to src/main/resources/application.properties.
 Update the following values:
 properties
@@ -46,7 +46,7 @@ properties
     springdoc.swagger-ui.oauth.client-secret=swagger-secret
     springdoc.swagger-ui.persistAuthorization=true
 
-# Step 4: Run the Application
+## Step 4: Run the Application
 Method 1: Using IntelliJ
 Open SurabiApplication.java.
 Click Run (the green arrow)
@@ -57,7 +57,7 @@ Run the following command:
 mvn spring-boot:run
 
 # How to Test the API
-# Step 5a: Test with Postman
+## Step 5a: Test with Postman
 Open Postman.
 
 Login to get a JWT Token:
@@ -88,7 +88,7 @@ Example API calls:
     Update User: PUT http://localhost:8080/api/users/{id}
     Delete User: DELETE http://localhost:8080/api/users/{id}
 
-# Step 5b: Test with Swagger UI
+## Step 5b: Test with Swagger UI
 Open Swagger UI in your browser:
     http://localhost:8080/swagger-ui/index.html
 
@@ -98,7 +98,7 @@ Enter the JWT token from Postman.
 
 Test different endpoints directly from Swagger.
 
-# Step 6: Access H2 Database Console
+## Step 6: Access H2 Database Console
 Open H2 Console in your browser:
 
 http://localhost:8080/h2-console
